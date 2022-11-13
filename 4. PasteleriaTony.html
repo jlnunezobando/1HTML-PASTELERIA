@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasteleria Tony</title>
+
+    <style>
+         *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Estilo de header */
+        header {
+            background: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: left;
+            width: 20%;
+            height: 700px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: right;
+            padding: 20px;
+            width: 80%;
+            background-color: #f1f1f1;
+            height: 700px;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+        td,th {
+
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,article {
+            width: 100%;
+            height: auto;
+            }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pasteleria Tony, desde mi nacimiento</h1>
+        <img src="./Pasteleria Tony.png" alt="Logo Pasteleria Tony"/>
+    </header>
+    
+    <section>
+        <nav> <!--Menu izquierdo-->
+            <h2>Organizacion</h2>
+            <ul>
+                <li> Cafe Frio</li>
+                <li> Cafe Caliente</li>
+                <li> Postres</li>
+            </ul>
+        </nav>
+
+        <article> <!--Centro Derecho-->
+        <h2>Menu</h2>
+        <Table>
+            <tr>
+            <th> Cafe Frio</th>
+            <th> Cafe caliente</th>
+            <th> Tortas</th>
+            </tr>
+            <tr>
+            <td> Granizado</td>
+            <td> Granizado</td>
+            <td> Chocolate</td>
+            </tr>
+            <tr>
+                <td>Capuchino</td>
+                <td>Capuchino</td>
+                <td>Fresa</td>
+            </tr>
+            <tr>
+                <td>Chai</td>
+                <td>Chai</td>
+                <td>Banano</td>
+            </tr>
+        </Table>
+    <br>
+        <table>
+            <tr>
+            <th>Pedido: Haz tu pedido aqui</th>
+        </tr>
+        <tr>
+            <td>De que local quiere el pedido?</td>
+            <td><select>
+                <option value="Principal">Principal</option>
+                <option value="Secundaria">Secundaria</option>
+            </select></td>
+        </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th>Frio</th>
+                <th>Cantidad</th>
+                <th>Caliente</th>
+                <th>Cantidad</th>
+                <th>Tortas</th>
+                <th>Cantidad</th>
+             </tr>
+        <tr>
+            <td><input type="checkbox" id="Granizado" name="Granizado" id="Granizado">
+                <label for="Granizado">Granizado</label></td>
+                <td><input type="number" id="Granizadofrionumber" name="Granizadofrionumber" placeholder="Cuantos?"></td>
+          <td>
+            <input type="checkbox" id="Granizado" name="Granizado" id="Granizado">
+            <label for="Granizado">Granizado</label></td>
+            <td><input type="number" id="Granizadocalientenumber" name="Granizadocalientenumber" placeholder="Cuantos?"></td>
+          <td>
+            <input type="checkbox" id="Chocolate" name="Chocolate" id="Chocolate">
+            <label for="Chocolate">Chocolate</label></td>
+            <td><input type="number" id="tortachocolatenumber" name="tortachocolatenumber" placeholder="Cuantos?"></td>
+          </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="Capuchino" name="Capuchino" id="Capuchino">
+                <label for="Capuchino">Capuchino</label></td>
+                <td><input type="number" id="Capuchinofrionumber" name="Capuchinofrionumber" placeholder="Cuantos?"></td>
+          <td>
+            <input type="checkbox" id="Capuchino" name="Capuchino" id="Capuchino">
+            <label for="Capuchino">Capuchino</label></td>
+            <td><input type="number" id="Capuchinocalientenumber" name="Capuchinocalientenumber" placeholder="Cuantos?"></td>
+          <td>
+            <input type="checkbox" id="Fresa" name="Fresa" id="Fresa">
+            <label for="Fresa">Fresa</label></td>
+            <td><input type="number" id="tortaFresanumber" name="tortaFresanumber" placeholder="Cuantos?"></td>
+          </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="Chai" name="Chai" id="Chai">
+                <label for="Chai">Chai</label></td>
+                <td><input type="number" id="Chaifrionumber" name="Chaifrionumber" placeholder="Cuantos?"></td>
+          <td>
+            <input type="checkbox" id="Chai" name="Chai" id="Chai">
+            <label for="Chai">Chai</label></td>
+            <td><input type="number" id="Chaicalientenumber" name="Chaicalientenumber" placeholder="Cuantos?"></td>
+          <td>
+            <input type="checkbox" id="Banano" name="Banano" id="Banano">
+            <label for="Banano">Banano</label></td>
+            <td><input type="number" id="tortaBananonumber" name="tortaBananonumber" placeholder="Cuantos?"></td>
+          </td>
+        </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="Nombre" id="Nombre" placeholder="Como te llamas?"></td>
+                <td><input type="text" name="Telefono" id="Telefono" placeholder="Numero Telefonico?"></td>
+                <td><input type="text" name="Direccion" id="Direccion" placeholder="Donde vives?"></td>
+                <br>
+        </tr>
+        </table>
+        <button type="submit">Enviar Pedido</button>
+        </article>
+    </section>
+   
+    <section> <!-- PIE DE PAGINA INICIO-->
+        <footer>
+        <h2>Ubicacion - Sucursales</h2>
+        <table>
+            <tr>
+                <th>Nombre:</th>
+                <th>Ubicacion:</th>
+                <th>Horarios:</th>
+            </tr>
+            <tr>
+                <td>Principal</td>
+                <td><a href="https://goo.gl/maps/aRKeYM2TUbVfqfF56" target="_blank">Cra. 98 #16-200, Cali</a></td>
+                <td>Lunes a Viernes 8 am a 6 pm</td>
+            </tr>
+            <tr>
+                <td>Secundaria</td>
+                <td><a href="https://g.page/torredecaliplazahotell?share" target="_blank">760046, Av. de las Americas #18N - 26, Cali</a></td>
+                <td>Lunes a Viernes 8 am a 6 pm</td>
+            </tr>
+        </table>
+    </footer>
+        
+    </section>
+  
+</body>
+</html> 
+
+
+
+
+
+
+<!--
+    <h3>Cafe Frio</h3>
+    
+            <p>Todos incluyen una Torta</p>
+            <ul>
+                <li>Granizado.....$10</li>
+                <li>Capuchino.....$10</li>
+                <li>Chai...............$10</li>
+            </ul>
+        <h3>Cafe Caliente</h3>
+            <p>Todos incluyen una Torta</p>
+            <ul>
+                <li>Granizado.....$12</li>
+                <li>Capuchino.....$12</li>
+                <li>Chai...............$12</li>
+            </ul>
+        <h3>Tortas</h3>
+            <p>Ricas tortas realizadas con amor</p>
+            <dl>
+                <dt>Chocolate..........$5</dt>
+                <dd>Rica Torta de chocolate realizada por los mejores pasteleros perrunos</dd>
+                <dt>Fresa.................$5</dt>
+                <dd>Rica Torta de Fresa realizada por los mejores pasteleros perrunos</dd>
+            </dl>
+
+
+<section>
+    <h2>Pedido</h2>
+      <h3>Haz tu pedido aqui</h3>
+
+      <p>De que local quieres hacer el pedido?</p>
+
+     <form action="">
+        <select>
+                <option value="Principal">Principal</option>
+                <option value="Secundaria">Secundaria</option>
+            </select>
+            <p>De cafe Frio quieres?</p>
+            <input type="checkbox" id="Granizado" name="Granizado" id="Granizado">
+            <label for="Granizado">Granizado</label>
+            <input type="number" id="Granizadofrionumber" name="Granizadofrionumber" placeholder="Cuantos?">
+            <br>
+            <input type="checkbox" id="Capuchino" name="Capuchino" id="Capuchino">
+            <label for="Capuchino">Capuchino</label>
+            <input type="number" id="Capuchinofrionumber" name="Capuchinofrionumber" placeholder="Cuantos?">
+            <br>
+            <input type="checkbox" id="Chai" name="Chai" id="Chai">
+            <label for="Chai">Chai</label>
+            <input type="number" id="Chaifrionumber" name="Chaifrionumber" placeholder="Cuantos?">
+            <br>
+
+            <p>De cafe caliente quieres?</p>
+            <input type="checkbox" id="Granizado" name="Granizado" id="Granizado">
+            <label for="Granizado">Granizado</label>
+            <input type="number" id="Granizadocalientenumber" name="Granizadocalientenumber" placeholder="Cuantos?">
+            <br>
+            <input type="checkbox" id="Capuchino" name="Capuchino" id="Capuchino">
+            <label for="Capuchino">Capuchino</label>
+            <input type="number" id="Capuchinocalientenumber" name="Capuchinocalientenumber" placeholder="Cuantos?">
+            <br>
+            <input type="checkbox" id="Chai" name="Chai" id="Chai">
+            <label for="Chai">Chai</label>
+            <input type="number" id="Chaicalientenumber" name="Chaicalientenumber" placeholder="Cuantos?">
+            <br><br>
+            
+
+        </form>
+    </section>
+
+            -->
